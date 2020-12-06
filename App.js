@@ -4,20 +4,12 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
-import DailyLogin1 from "./src/screens/DailyLogin1";
-import Home from "./src/screens/Home";
-import Profile from "./src/screens/Profile";
-import Splash1 from "./src/screens/Splash1";
+import Moduleselect from "./src/screens/Moduleselect";
 import Untitled from "./src/screens/Untitled";
-import Untitled1 from "./src/screens/Untitled1";
 
 const DrawerNavigation = createDrawerNavigator({
-  DailyLogin1: DailyLogin1,
-  Home: Home,
-  Profile: Profile,
-  Splash1: Splash1,
-  Untitled: Untitled,
-  Untitled1: Untitled1
+  Moduleselect: Moduleselect,
+  Untitled: Untitled
 });
 
 const StackNavigation = createStackNavigator(
@@ -25,12 +17,8 @@ const StackNavigation = createStackNavigator(
     DrawerNavigation: {
       screen: DrawerNavigation
     },
-    DailyLogin1: DailyLogin1,
-    Home: Home,
-    Profile: Profile,
-    Splash1: Splash1,
-    Untitled: Untitled,
-    Untitled1: Untitled1
+    Moduleselect: Moduleselect,
+    Untitled: Untitled
   },
   {
     headerMode: "none"
@@ -56,8 +44,10 @@ function App() {
 async function loadResourcesAsync() {
   await Promise.all([
     Font.loadAsync({
-      "rubik-700": require("./src/assets/fonts/rubik-700.ttf"),
-      "rubik-500": require("./src/assets/fonts/rubik-500.ttf")
+      "Poppins-Light": require("./src/assets/fonts/Poppins-Light.ttf"),
+      "Poppins-SemiBold": require("./src/assets/fonts/Poppins-SemiBold.ttf"),
+      "poppins-regular": require("./src/assets/fonts/roboto-regular.ttf"),
+      "poppins-600": require("./src/assets/fonts/roboto-regular.ttf")
     })
   ]);
 }
