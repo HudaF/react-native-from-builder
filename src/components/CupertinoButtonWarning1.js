@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
-function CupertinoButtonWarning(props) {
+function CupertinoButtonWarning1(props) {
   return (
     <TouchableOpacity
       style={[styles.container, props.style]}
@@ -15,13 +15,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    borderRadius: 12,
+    borderRadius: 20,
     paddingLeft: 16,
-    paddingRight: 16,
-    borderWidth: 1,
-    borderColor: "rgba(74,74,74,1)",
-    borderStyle: "solid"
+    paddingRight: 16
   }
 });
 
-export default CupertinoButtonWarning;
+export default CupertinoButtonWarning1;

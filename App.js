@@ -4,12 +4,12 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
-import Moduleselect from "./src/screens/Moduleselect";
-import Untitled from "./src/screens/Untitled";
+import Module from "./src/screens/Module";
+import Submdolue from "./src/screens/Submdolue";
 
 const DrawerNavigation = createDrawerNavigator({
-  Moduleselect: Moduleselect,
-  Untitled: Untitled
+  Module: Module,
+  Submdolue: Submdolue
 });
 
 const StackNavigation = createStackNavigator(
@@ -17,8 +17,8 @@ const StackNavigation = createStackNavigator(
     DrawerNavigation: {
       screen: DrawerNavigation
     },
-    Moduleselect: Moduleselect,
-    Untitled: Untitled
+    Module: Module,
+    Submdolue: Submdolue
   },
   {
     headerMode: "none"
@@ -44,10 +44,11 @@ function App() {
 async function loadResourcesAsync() {
   await Promise.all([
     Font.loadAsync({
+      "Poppins-Bold": require("./src/assets/fonts/Poppins-Bold.ttf"),
       "Poppins-Light": require("./src/assets/fonts/Poppins-Light.ttf"),
       "Poppins-SemiBold": require("./src/assets/fonts/Poppins-SemiBold.ttf"),
-      "poppins-regular": require("./src/assets/fonts/roboto-regular.ttf"),
-      "poppins-600": require("./src/assets/fonts/roboto-regular.ttf")
+      "poppins-600": require("./src/assets/fonts/roboto-regular.ttf"),
+      "poppins-regular": require("./src/assets/fonts/roboto-regular.ttf")
     })
   ]);
 }
