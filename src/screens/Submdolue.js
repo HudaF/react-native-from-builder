@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
   group4: {
     width: 270,
     height: 78,
-    marginTop: 22,
+    marginTop: 25,
     marginLeft: 46
   },
   group: {
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
   group5: {
     width: 270,
     height: 78,
-    marginTop: 19,
+    marginTop: 16,
     marginLeft: 46
   },
   cupertinoButtonWarning3: {

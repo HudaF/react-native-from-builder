@@ -1,12 +1,50 @@
 import React, { Component } from "react";
-import { StyleSheet, View, TouchableOpacity, Image, Text } from "react-native";
-import CupertinoButtonDanger from "../components/CupertinoButtonDanger";
+import { StyleSheet, View, Image, TouchableOpacity, Text } from "react-native";
 import CupertinoButtonSuccess from "../components/CupertinoButtonSuccess";
 import CupertinoButtonWarning1 from "../components/CupertinoButtonWarning1";
+import CupertinoButtonDanger from "../components/CupertinoButtonDanger";
 
 function Module(props) {
   return (
     <View style={styles.container}>
+      <View style={styles.image6Stack}>
+        <Image
+          source={require("../assets/images/image_22.png")}
+          resizeMode="contain"
+          style={styles.image6}
+        ></Image>
+        <Image
+          source={require("../assets/images/image_22.png")}
+          resizeMode="contain"
+          style={styles.image5}
+        ></Image>
+      </View>
+      <TouchableOpacity style={styles.button2}>
+        <View style={styles.cupertinoButtonSuccessStack}>
+          <CupertinoButtonSuccess
+            style={styles.cupertinoButtonSuccess}
+          ></CupertinoButtonSuccess>
+          <Image
+            source={require("../assets/images/drawing-011.png")}
+            resizeMode="contain"
+            style={styles.image3}
+          ></Image>
+          <Text style={styles.drawing}>Drawing</Text>
+        </View>
+      </TouchableOpacity>
+      <View style={styles.group}>
+        <View style={styles.cupertinoButtonWarning1Stack}>
+          <CupertinoButtonWarning1
+            style={styles.cupertinoButtonWarning1}
+          ></CupertinoButtonWarning1>
+          <Text style={styles.urdu}>Urdu</Text>
+          <Image
+            source={require("../assets/images/alif_bay_urdu_module_orange-01.png")}
+            resizeMode="contain"
+            style={styles.image2}
+          ></Image>
+        </View>
+      </View>
       <TouchableOpacity style={styles.button3}>
         <View style={styles.cupertinoButtonDangerStack}>
           <CupertinoButtonDanger
@@ -20,44 +58,6 @@ function Module(props) {
           <Text style={styles.coloring}>Coloring</Text>
         </View>
       </TouchableOpacity>
-      <View style={styles.button3Filler}>
-        <View style={styles.button2Stack}>
-          <TouchableOpacity style={styles.button2}>
-            <View style={styles.cupertinoButtonSuccessStack}>
-              <CupertinoButtonSuccess
-                style={styles.cupertinoButtonSuccess}
-              ></CupertinoButtonSuccess>
-              <Image
-                source={require("../assets/images/drawing-011.png")}
-                resizeMode="contain"
-                style={styles.image3}
-              ></Image>
-              <Text style={styles.drawing}>Drawing</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => props.navigation.navigate("Submdolue")}
-            style={styles.button4}
-          >
-            <View style={styles.cupertinoButtonWarning1Stack}>
-              <CupertinoButtonWarning1
-                style={styles.cupertinoButtonWarning1}
-              ></CupertinoButtonWarning1>
-              <Text style={styles.urdu}>Urdu</Text>
-              <Image
-                source={require("../assets/images/alif_bay_urdu_module_orange-01.png")}
-                resizeMode="contain"
-                style={styles.image2}
-              ></Image>
-            </View>
-          </TouchableOpacity>
-        </View>
-        <Image
-          source={require("../assets/images/image_21.png")}
-          resizeMode="contain"
-          style={styles.image}
-        ></Image>
-      </View>
     </View>
   );
 }
@@ -66,45 +66,31 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  button3: {
-    width: 286,
-    height: 98,
-    marginTop: 469,
-    marginLeft: 41
-  },
-  cupertinoButtonDanger: {
-    position: "absolute",
+  image6: {
     top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0
-  },
-  image4: {
-    top: 0,
-    left: 0,
-    width: 96,
-    height: 96,
+    left: 193,
+    width: 215,
+    height: 207,
     position: "absolute"
   },
-  coloring: {
-    top: 23,
-    position: "absolute",
-    fontFamily: "Poppins-Bold",
-    color: "rgba(1,45,138,1)",
-    fontSize: 38,
-    left: 93,
-    width: 168,
-    height: 58
+  image5: {
+    top: 0,
+    left: 0,
+    width: 215,
+    height: 207,
+    position: "absolute"
   },
-  cupertinoButtonDangerStack: {
-    flex: 1
+  image6Stack: {
+    width: 408,
+    height: 208,
+    marginTop: -43,
+    marginLeft: -22
   },
   button2: {
-    top: 139,
-    left: 0,
     width: 286,
     height: 98,
-    position: "absolute"
+    marginTop: 139,
+    marginLeft: 48
   },
   cupertinoButtonSuccess: {
     position: "absolute",
@@ -133,12 +119,11 @@ const styles = StyleSheet.create({
   cupertinoButtonSuccessStack: {
     flex: 1
   },
-  button4: {
-    top: 0,
-    left: 0,
-    position: "absolute",
-    right: 0,
-    bottom: 96
+  group: {
+    width: 286,
+    height: 139,
+    marginTop: -237,
+    marginLeft: 48
   },
   cupertinoButtonWarning1: {
     height: 98,
@@ -148,7 +133,7 @@ const styles = StyleSheet.create({
     right: 0
   },
   urdu: {
-    top: 26,
+    top: 24,
     position: "absolute",
     fontFamily: "Poppins-Bold",
     color: "rgba(243,117,66,1)",
@@ -167,21 +152,37 @@ const styles = StyleSheet.create({
   cupertinoButtonWarning1Stack: {
     flex: 1
   },
-  button2Stack: {
-    top: 200,
-    left: 37,
-    position: "absolute",
-    right: 37,
-    bottom: 203
+  button3: {
+    width: 286,
+    height: 98,
+    marginTop: 129,
+    marginLeft: 51
   },
-  image: {
-    top: -58,
-    width: 410,
+  cupertinoButtonDanger: {
     position: "absolute",
-    left: -50,
-    bottom: 455
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0
   },
-  button3Filler: {
+  image4: {
+    top: 0,
+    left: 0,
+    width: 96,
+    height: 96,
+    position: "absolute"
+  },
+  coloring: {
+    top: 23,
+    position: "absolute",
+    fontFamily: "Poppins-Bold",
+    color: "rgba(1,45,138,1)",
+    fontSize: 38,
+    left: 93,
+    width: 168,
+    height: 58
+  },
+  cupertinoButtonDangerStack: {
     flex: 1
   }
 });
