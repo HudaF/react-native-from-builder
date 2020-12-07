@@ -71,6 +71,7 @@ function Submdolue(props) {
           <Text style={styles.flashcardsForWords}>Flashcards for words</Text>
         </View>
       </View>
+      <View style={styles.rect}></View>
     </View>
   );
 }
@@ -212,7 +213,7 @@ const styles = StyleSheet.create({
   group5: {
     width: 270,
     height: 78,
-    marginTop: 16,
+    marginTop: 21,
     marginLeft: 46
   },
   cupertinoButtonWarning3: {
@@ -247,6 +248,12 @@ const styles = StyleSheet.create({
   },
   cupertinoButtonWarning3Stack: {
     height: 78
+  },
+  rect: {
+    width: 360,
+    height: 23,
+    backgroundColor: "rgba(255,241,222,1)",
+    marginTop: -542
   }
 });
 
