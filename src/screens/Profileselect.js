@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   button2: {
     width: 280,
     height: 126,
-    marginTop: 314,
+    marginTop: 280,
     marginLeft: 40
   },
   rect3: {
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   button: {
     width: 280,
     height: 124,
-    marginTop: -264,
+    marginTop: -258,
     marginLeft: 40
   },
   rect2: {
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     width: 360,
     height: 23,
     backgroundColor: "rgba(255,241,222,1)",
-    marginTop: -300
+    marginTop: -272
   },
   cupertinoHeaderWithAddButton: {
     height: 44,
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   group: {
     width: 280,
     height: 115,
-    marginTop: 393,
+    marginTop: 358,
     marginLeft: 40
   },
   rect4: {
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins-Bold",
     color: "rgba(3,48,140,1)",
     fontSize: 32,
-    marginTop: -463,
+    marginTop: -440,
     marginLeft: 32,
     marginRight: 32
   }
