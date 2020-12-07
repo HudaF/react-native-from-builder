@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 import IoniconsIcon from "react-native-vector-icons/Ionicons";
-import FeatherIcon from "react-native-vector-icons/Feather";
+import EntypoIcon from "react-native-vector-icons/Entypo";
 
-function CupertinoHeaderWithBackground(props) {
+function CupertinoHeaderWithAddButton(props) {
   return (
     <View style={[styles.container, props.style]}>
-      <TouchableOpacity
-        onPress={() => console.log("Navigate to Module")}
-        style={styles.button}
-      >
+      <View style={styles.leftWrapper}>
         <TouchableOpacity style={styles.leftIconButton}>
           <IoniconsIcon
             name="ios-arrow-back"
@@ -17,10 +14,8 @@ function CupertinoHeaderWithBackground(props) {
           ></IoniconsIcon>
           <Text style={styles.leftText}>Back</Text>
         </TouchableOpacity>
-      </TouchableOpacity>
-      <View style={styles.textWrapper}></View>
-      <View style={styles.rightWrapper}></View>
-      <FeatherIcon name="menu" style={styles.icon}></FeatherIcon>
+      </View>
+      <EntypoIcon name="menu" style={styles.icon}></EntypoIcon>
     </View>
   );
 }
@@ -28,12 +23,12 @@ function CupertinoHeaderWithBackground(props) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    backgroundColor: "rgba(255,191,8,1)",
+    backgroundColor: "rgba(3,48,140,1)",
     paddingRight: 8,
     paddingLeft: 8
   },
-  button: {
-    flex: 0.32,
+  leftWrapper: {
+    flex: 1,
     alignItems: "flex-start",
     justifyContent: "center"
   },
@@ -41,33 +36,25 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   leftIcon: {
-    color: "#FFFFFF",
+    color: "rgba(255,255,255,1)",
     fontSize: 32
   },
   leftText: {
     alignSelf: "center",
     fontSize: 15,
     paddingLeft: 5,
-    color: "#FFFFFF",
-    fontFamily: "poppins-regular"
-  },
-  textWrapper: {
-    flex: 0.36,
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  rightWrapper: {
-    flex: 0.32,
-    alignItems: "flex-end",
-    justifyContent: "center"
+    color: "rgba(255,255,255,1)",
+    fontFamily: "Poppins-Regular"
   },
   icon: {
     top: 10,
+    left: 328,
     position: "absolute",
     color: "rgba(255,255,255,1)",
     fontSize: 25,
-    right: 14
+    width: 26,
+    height: 27
   }
 });
 
-export default CupertinoHeaderWithBackground;
+export default CupertinoHeaderWithAddButton;

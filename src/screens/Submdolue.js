@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, View, StatusBar, Text, Image } from "react-native";
+import { StyleSheet, View, Text, Image } from "react-native";
 import CupertinoHeaderWithBackground from "../components/CupertinoHeaderWithBackground";
 import CupertinoButtonWarning from "../components/CupertinoButtonWarning";
 
 function Submdolue(props) {
   return (
     <View style={styles.container}>
-      <StatusBar hidden />
       <CupertinoHeaderWithBackground
         style={styles.cupertinoHeaderWithBackground}
       ></CupertinoHeaderWithBackground>

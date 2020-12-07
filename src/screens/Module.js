@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  StyleSheet,
-  View,
-  StatusBar,
-  Image,
-  TouchableOpacity,
-  Text
-} from "react-native";
+import { StyleSheet, View, Image, TouchableOpacity, Text } from "react-native";
 import CupertinoButtonDanger from "../components/CupertinoButtonDanger";
 import CupertinoButtonWarning1 from "../components/CupertinoButtonWarning1";
 import CupertinoButtonSuccess from "../components/CupertinoButtonSuccess";
@@ -14,7 +7,6 @@ import CupertinoButtonSuccess from "../components/CupertinoButtonSuccess";
 function Module(props) {
   return (
     <View style={styles.container}>
-      <StatusBar hidden />
       <View style={styles.group2Stack}>
         <View style={styles.group2}>
           <View style={styles.image8Stack}>
